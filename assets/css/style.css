@@ -24,11 +24,11 @@
   --white_a8: hsla(0, 0%, 100%, 0.08);
   --white_a12: hsla(0, 0%, 100%, 0.12);
   --cultured: hsla(220, 20%, 97%, 1);
-  --snow: hsla(345, 57%, 97%, 1);
+  --snow: rgb(245, 233, 255);
   --manatee: hsla(219, 10%, 62%, 1);
   --black-coral: hsla(220, 12%, 43%, 1);
   --cadet-blue-crayola_a20: hsla(222, 23%, 71%, 0.2);
-  --cinnamon-satin: hsla(344, 53%, 62%, 1);
+  --cinnamon-satin: rgb(146, 107, 209);
   --raisin-black: hsla(216, 14%, 14%, 1);
   --raisin-black_a6: hsla(216, 14%, 14%, 0.06);
   --gunmetal: hsla(214, 15%, 21%, 1);
@@ -215,7 +215,7 @@ body.nav-active { overflow: hidden; }
   color: var(--white);
 }
 
-.section-text { font-size: var(--fs-5); }
+.section-text { font-size: var(--fs-5); text-align: justify;}
 
 .section-title { margin-block-end: 16px; }
 
@@ -388,13 +388,6 @@ body.nav-active { overflow: hidden; }
   -webkit-mask-size: auto;
 }
 
-.hero .shape {
-  position: absolute;
-  bottom: 10%;
-  right: 2%;
-  filter: drop-shadow(var(--shadow-2));
-}
-
 .hero-content { text-align: center; }
 
 .hero .section-text { margin-block: 24px 36px; }
@@ -416,9 +409,8 @@ body.nav-active { overflow: hidden; }
 \*-----------------------------------*/
 
 .about .wrapper {
-  display: grid;
-  gap: 50px;
-  margin-block-end: 70px;
+  display: flex;
+  margin-block-end: 10px;
 }
 
 .progress-list .label-wrapper {
@@ -440,14 +432,18 @@ body.nav-active { overflow: hidden; }
 
 .progress-fill { height: inherit; }
 
-.about-card { text-align: center; }
+/*-----------------------------------*\
+  #SKILLS
+\*-----------------------------------*/
 
-.about-card .card-icon {
+.skills-card { text-align: center; }
+
+.skills-card .card-icon {
   max-width: max-content;
   margin-inline: auto;
 }
 
-.about-card .card-title { margin-block: 16px 10px; }
+.skills-card .card-title { margin-block: 16px 10px; }
 
 
 
@@ -489,9 +485,9 @@ body.nav-active { overflow: hidden; }
   text-transform: uppercase;
 }
 
-.project-card .card-title { margin-block: 16px; }
+.project-card .card-title { margin-block: 16px; vertical-align: middle;}
 
-.project-card .card-text { margin-block-end: 20px; }
+.project-card .card-text { margin-block-end: 20px; text-align: justify; vertical-align: middle;   padding: 50px 0;}
 
 .project-card .btn-text {
   display: flex;
@@ -622,7 +618,7 @@ textarea.input-field {
    * ABOUT
    */
 
-  .about .grid-list { grid-template-columns: 1fr 1fr; }
+  .skills .grid-list { grid-template-columns: 1fr 1fr; }
 
 
 
@@ -782,7 +778,7 @@ textarea.input-field {
     align-items: center;
   }
 
-  .about .grid-list { grid-template-columns: repeat(4, 1fr); }
+  .skills .grid-list { grid-template-columns: repeat(4, 1fr); }
 
 
 
@@ -848,7 +844,7 @@ textarea.input-field {
    * ABOUT
    */
 
-  .about .grid-list { gap: 50px; }
+  .skills .grid-list { gap: 50px; }
 
 
 
@@ -895,6 +891,6 @@ textarea.input-field {
 
   .about .wrapper { gap: 100px; }
 
-  .about .grid-list { gap: 60px; }
+  .skills .grid-list { gap: 60px; }
 
 }
